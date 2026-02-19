@@ -77,9 +77,33 @@
 <button class="p-2 hover:bg-primary/5 rounded-lg transition-colors">
 <span class="material-symbols-outlined">person</span>
 </button>
+<button aria-controls="mobile-menu-overlay" aria-expanded="false" class="p-2 hover:bg-primary/5 rounded-lg transition-colors md:hidden" id="mobile-menu-button" type="button">
+<span class="material-symbols-outlined" id="mobile-menu-icon">menu</span>
+</button>
 </div>
 </div>
 </header>
+<div class="fixed inset-0 z-[95] hidden md:hidden" id="mobile-menu-overlay">
+<div class="absolute inset-0 bg-primary/70" id="mobile-menu-backdrop"></div>
+<div class="absolute inset-0 overflow-y-auto bg-primary">
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBX-sXPO-nxv06RuaCBuRL_d1FkTuhtv3gBkhzc40PN7v29zytfBh-aJNFJBcaM_9bbey7NL85Qr7lNsa6FTLjkfTT3QgLas1rRebVCe1V6kS1f4fSewSJuegnYSxkpYS2cPfuvN6p8YHPo9hZ5jGEppKDHbmJgeOZrIToZnr3Ydze4Z8JlL-2wi0DAIARYIHAZYkQRsDbZqSL-JgP-O8jLGkEZKm9uwIFaXsTsVi5O8-HHBIOMFThnAKiHdY78wYjbA21rBD0DcEy-');"></div>
+<div class="relative min-h-screen flex flex-col px-6 py-6 text-[#f5f5dc]">
+<div class="flex items-center justify-between mb-6">
+<a class="flex items-center gap-3" href="index.html"><img alt="MateYa!" class="h-10 w-auto" src="assets/logo-mateya.svg"/></a>
+<button class="h-11 w-11 rounded-full border border-[#f5f5dc]/20 flex items-center justify-center" id="mobile-menu-close" type="button"><span class="material-symbols-outlined">close</span></button>
+</div>
+<nav class="flex flex-col gap-1 text-3xl font-medium">
+<a class="py-2 text-[#f5f5dc]/80 hover:text-[#f5f5dc]" href="index.html">Inicio</a>
+<a class="py-2 text-[#f5f5dc] font-bold" href="catalogo.html">Catálogo</a>
+<a class="py-2 text-[#f5f5dc]/80 hover:text-[#f5f5dc]" href="packs.html">Packs</a>
+<a class="py-2 text-[#f5f5dc]/80 hover:text-[#f5f5dc]" href="nosotros.html">Nosotros</a>
+<a class="py-2 text-[#f5f5dc]/80 hover:text-[#f5f5dc]" href="faq.html#envios">Envíos</a>
+<a class="py-2 text-[#f5f5dc]/80 hover:text-[#f5f5dc]" href="faq.html">FAQ</a>
+</nav>
+<a class="mt-8 w-full rounded-xl bg-[#f5f5dc] px-6 py-4 text-center text-lg font-bold text-primary" href="https://api.whatsapp.com/send?text=Hola%20MateYa!%20Quiero%20comprar" rel="noopener noreferrer" target="_blank">Comprar por WhatsApp</a>
+</div>
+</div>
+</div>
 <main class="max-w-7xl mx-auto px-4 py-8">
 <div class="flex flex-col lg:flex-row gap-8">
 <!-- Filters Sidebar -->
@@ -351,6 +375,11 @@ Pedir cotización
     var cartClose = document.getElementById("cart-close");
     var cartItems = document.getElementById("cart-items");
     var cartQuoteBtn = document.getElementById("cart-quote-btn");
+    var menuButton = document.getElementById("mobile-menu-button");
+    var menuIcon = document.getElementById("mobile-menu-icon");
+    var menuOverlay = document.getElementById("mobile-menu-overlay");
+    var menuBackdrop = document.getElementById("mobile-menu-backdrop");
+    var menuClose = document.getElementById("mobile-menu-close");
     var activeCard = null;
 
     if (!cards.length || !modal || !modalTitle || !modalDesc || !modalClose || !modalWa || !modalAddCart || !grid || !gridBtn || !listBtn || !cartButton || !cartCount || !cartDrawer || !cartBackdrop || !cartClose || !cartItems || !cartQuoteBtn) return;
@@ -546,6 +575,26 @@ Pedir cotización
 
     gridBtn.addEventListener("click", function () { setActiveView("grid"); });
     listBtn.addEventListener("click", function () { setActiveView("list"); });
+    if (menuButton && menuIcon && menuOverlay) {
+      function closeMobileMenu() {
+        menuOverlay.classList.add("hidden");
+        document.body.classList.remove("overflow-hidden");
+        menuButton.setAttribute("aria-expanded", "false");
+        menuIcon.textContent = "menu";
+      }
+      menuButton.addEventListener("click", function () {
+        var isHidden = menuOverlay.classList.contains("hidden");
+        menuOverlay.classList.toggle("hidden");
+        document.body.classList.toggle("overflow-hidden", isHidden);
+        menuButton.setAttribute("aria-expanded", isHidden ? "true" : "false");
+        menuIcon.textContent = isHidden ? "close" : "menu";
+      });
+      if (menuClose) menuClose.addEventListener("click", closeMobileMenu);
+      if (menuBackdrop) menuBackdrop.addEventListener("click", closeMobileMenu);
+      menuOverlay.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", closeMobileMenu);
+      });
+    }
     renderCart();
   })();
 </script>
