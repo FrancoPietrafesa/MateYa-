@@ -1,0 +1,20 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 220" role="img" aria-labelledby="title desc">
+  <title id="title">MateYa!</title>
+  <desc id="desc">Logo de MateYa</desc>
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0f3d0f"/>
+      <stop offset="100%" stop-color="#6ba120"/>
+    </linearGradient>
+  </defs>
+  <g fill="url(#g)">
+    <circle cx="96" cy="128" r="72"/>
+    <rect x="82" y="36" width="28" height="28" rx="8"/>
+    <path d="M120 26l26 0-20 34 18-4-22 24 16-2-28 36h-22z"/>
+    <ellipse cx="78" cy="66" rx="18" ry="28" transform="rotate(-45 78 66)"/>
+    <path d="M47 118c34 11 68 11 102 0" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" opacity="0.85"/>
+    <path d="M52 144c30 9 60 9 90 0" fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" opacity="0.75"/>
+    <path d="M62 168c22 7 44 7 66 0" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" opacity="0.65"/>
+  </g>
+  <text x="182" y="165" font-family="Manrope, Arial, sans-serif" font-size="120" font-style="italic" font-weight="800" fill="url(#g)">MateYa!</text>
+</svg>
