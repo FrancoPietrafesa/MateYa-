@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Packs por Marca - MateYa!</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "primary": "#1a2d1e",
+          "background-light": "#f6f7f7",
+          "background-dark": "#161c17",
+          "accent-gold": "#c5a47e"
+        },
+        fontFamily: { "display": ["Manrope", "sans-serif"] },
+        borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }
+      }
+    }
+  }
+</script>
+<style>
+  body { font-family: 'Manrope', sans-serif; }
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100">
+<div class="relative flex min-h-screen flex-col overflow-x-hidden">
+<header class="sticky top-0 z-50 w-full border-b border-primary/10 bg-background-light/80 backdrop-blur-md dark:bg-background-dark/80 px-4 md:px-10 lg:px-40 py-3">
+<div class="mx-auto flex max-w-[1200px] items-center justify-between gap-4">
+<div class="flex items-center gap-8">
+<a class="flex items-center" href="index.html">
+<img alt="MateYa!" class="h-12 w-auto" src="assets/logo-mateya.png"/>
+</a>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-sm font-semibold hover:text-primary/70 transition-colors" href="index.html">Inicio</a>
+<a class="text-sm font-semibold hover:text-primary/70 transition-colors" href="catalogo.html">Catálogo</a>
+<a class="text-sm font-semibold text-primary underline decoration-2 underline-offset-8" href="packs.html">Packs</a>
+<a class="text-sm font-semibold hover:text-primary/70 transition-colors" href="nosotros.html">Nosotros</a>
+<a class="text-sm font-semibold hover:text-primary/70 transition-colors" href="faq.html">FAQ</a>
+</nav>
+</div>
+<a class="bg-primary text-white px-4 py-2 rounded-lg text-sm font-bold hover:bg-primary/90" href="catalogo.html">Ver catálogo</a>
+</div>
+</header>
+
+<main class="flex-1 px-4 py-12 md:px-10 lg:px-40">
+<div class="max-w-[1200px] mx-auto">
+<div class="max-w-3xl mb-10">
+<span class="inline-block px-3 py-1 text-xs font-bold uppercase tracking-wider text-primary bg-primary/10 rounded-full w-fit">Combos por volumen</span>
+<h1 class="mt-4 text-4xl md:text-5xl font-extrabold tracking-tight text-primary dark:text-slate-100 leading-[1.1]">Packs de yerba por marca y surtidos</h1>
+<p class="mt-4 text-lg text-slate-600 dark:text-slate-400">Armamos combos para consumo frecuente, oficinas y compras grupales. Todos incluyen opción de consulta inmediata por WhatsApp.</p>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="group flex flex-col bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-primary/5 shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="p-6 flex-1">
+<span class="inline-block bg-primary/10 text-primary text-[10px] font-bold px-2 py-1 rounded uppercase tracking-widest">Más pedido</span>
+<h3 class="mt-3 text-2xl font-bold text-primary dark:text-slate-100">Combo Baldo 5kg</h3>
+<ul class="mt-4 space-y-2 text-sm text-slate-600 dark:text-slate-300">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-base text-primary">check_circle</span>Yerba Baldo x 5kg</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-base text-primary">check_circle</span>Ideal consumo mensual</li>
+</ul>
+</div>
+<div class="p-6 pt-0 flex items-center justify-between">
+<p class="text-2xl font-black text-primary dark:text-slate-100">$39.900</p>
+<a class="bg-primary text-white px-4 py-2.5 rounded-lg font-bold text-sm hover:bg-primary/90" href="https://wa.me/5491136692718?text=Hola!%20Quiero%20consultar%20el%20Combo%20Baldo%205kg" target="_blank" rel="noopener noreferrer">Consultar</a>
+</div>
+</div>
+
+<div class="group flex flex-col bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-primary/5 shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="p-6 flex-1">
+<span class="inline-block bg-accent-gold/20 text-primary text-[10px] font-bold px-2 py-1 rounded uppercase tracking-widest">Mayor volumen</span>
+<h3 class="mt-3 text-2xl font-bold text-primary dark:text-slate-100">Combo Baldo 10kg</h3>
+<ul class="mt-4 space-y-2 text-sm text-slate-600 dark:text-slate-300">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-base text-primary">check_circle</span>Yerba Baldo x 10kg</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-base text-primary">check_circle</span>Mejor precio por kilo</li>
+</ul>
+</div>
+<div class="p-6 pt-0 flex items-center justify-between">
+<p class="text-2xl font-black text-primary dark:text-slate-100">$76.500</p>
+<a class="bg-primary text-white px-4 py-2.5 rounded-lg font-bold text-sm hover:bg-primary/90" href="https://wa.me/5491136692718?text=Hola!%20Quiero%20consultar%20el%20Combo%20Baldo%2010kg" target="_blank" rel="noopener noreferrer">Consultar</a>
+</div>
+</div>
+
+<div class="group flex flex-col bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-primary/5 shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="p-6 flex-1">
+<h3 class="text-2xl font-bold text-primary dark:text-slate-100">Combo Sara 5kg</h3>
+<ul class="mt-4 space-y-2 text-sm text-slate-600 dark:text-slate-300">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-base text-primary">check_circle</span>Yerba Sara x 5kg</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-base text-primary">check_circle</span>Rendimiento alto en cebadas</li>
+</ul>
+</div>
+<div class="p-6 pt-0 flex items-center justify-between">
+<p class="text-2xl font-black text-primary dark:text-slate-100">$38.900</p>
+<a class="bg-primary text-white px-4 py-2.5 rounded-lg font-bold text-sm hover:bg-primary/90" href="https://wa.me/5491136692718?text=Hola!%20Quiero%20consultar%20el%20Combo%20Sara%205kg" target="_blank" rel="noopener noreferrer">Consultar</a>
+</div>
+</div>
+
+<div class="group flex flex-col bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-primary/5 shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="p-6 flex-1">
+<h3 class="text-2xl font-bold text-primary dark:text-slate-100">Combo Canarias 5kg</h3>
+<ul class="mt-4 space-y-2 text-sm text-slate-600 dark:text-slate-300">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-base text-primary">check_circle</span>Yerba Canarias x 5kg</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-base text-primary">check_circle</span>Sabor intenso y continuo</li>
+</ul>
+</div>
+<div class="p-6 pt-0 flex items-center justify-between">
+<p class="text-2xl font-black text-primary dark:text-slate-100">$41.500</p>
+<a class="bg-primary text-white px-4 py-2.5 rounded-lg font-bold text-sm hover:bg-primary/90" href="https://wa.me/5491136692718?text=Hola!%20Quiero%20consultar%20el%20Combo%20Canarias%205kg" target="_blank" rel="noopener noreferrer">Consultar</a>
+</div>
+</div>
+
+<div class="group flex flex-col bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-primary/5 shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="p-6 flex-1">
+<h3 class="text-2xl font-bold text-primary dark:text-slate-100">Combo Barao 5kg</h3>
+<ul class="mt-4 space-y-2 text-sm text-slate-600 dark:text-slate-300">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-base text-primary">check_circle</span>Yerba Barao x 5kg</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-base text-primary">check_circle</span>Ideal para consumo diario</li>
+</ul>
+</div>
+<div class="p-6 pt-0 flex items-center justify-between">
+<p class="text-2xl font-black text-primary dark:text-slate-100">$37.900</p>
+<a class="bg-primary text-white px-4 py-2.5 rounded-lg font-bold text-sm hover:bg-primary/90" href="https://wa.me/5491136692718?text=Hola!%20Quiero%20consultar%20el%20Combo%20Barao%205kg" target="_blank" rel="noopener noreferrer">Consultar</a>
+</div>
+</div>
+
+<div class="group flex flex-col bg-white dark:bg-slate-800 rounded-xl overflow-hidden border border-primary/5 shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="p-6 flex-1">
+<span class="inline-block bg-primary text-white text-[10px] font-bold px-2 py-1 rounded uppercase tracking-widest">Surtido</span>
+<h3 class="mt-3 text-2xl font-bold text-primary dark:text-slate-100">Combo Surtido 8kg</h3>
+<ul class="mt-4 space-y-2 text-sm text-slate-600 dark:text-slate-300">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-base text-primary">check_circle</span>2kg Baldo</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-base text-primary">check_circle</span>2kg Sara</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-base text-primary">check_circle</span>2kg Canarias</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-base text-primary">check_circle</span>2kg Barao</li>
+</ul>
+</div>
+<div class="p-6 pt-0 flex items-center justify-between">
+<p class="text-2xl font-black text-primary dark:text-slate-100">$62.900</p>
+<a class="bg-primary text-white px-4 py-2.5 rounded-lg font-bold text-sm hover:bg-primary/90" href="https://wa.me/5491136692718?text=Hola!%20Quiero%20consultar%20el%20Combo%20Surtido%208kg%20(2kg%20de%20cada%20marca)" target="_blank" rel="noopener noreferrer">Consultar</a>
+</div>
+</div>
+</div>
+
+<div class="mt-14 rounded-2xl bg-primary text-white p-8">
+<h2 class="text-3xl font-bold">¿Querés un combo personalizado?</h2>
+<p class="mt-3 text-white/80 max-w-2xl">Podemos armar packs por marca, por kilos totales o por mix de variedades según tu consumo.</p>
+<a class="mt-6 inline-flex items-center gap-2 rounded-lg bg-white px-5 py-3 font-bold text-primary" href="https://wa.me/5491136692718?text=Hola!%20Quiero%20armar%20un%20combo%20personalizado" target="_blank" rel="noopener noreferrer">
+<span class="material-symbols-outlined">chat</span>
+Hablar por WhatsApp
+</a>
+</div>
+</div>
+</main>
+
+<footer class="bg-primary/5 dark:bg-slate-900 border-t border-primary/10 py-12 px-4 md:px-10 lg:px-40">
+<div class="max-w-[1200px] mx-auto flex flex-wrap justify-between gap-12">
+<div class="flex flex-col gap-4 max-w-xs">
+<div class="flex items-center text-primary dark:text-slate-100">
+<img alt="MateYa!" class="h-10 w-auto" src="assets/logo-mateya.png"/>
+</div>
+<p class="text-sm text-slate-500">Llevando la cultura del mate a cada rincón con calidad y pasión artesanal.</p>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-8">
+<div class="flex flex-col gap-3">
+<h4 class="font-bold text-primary dark:text-slate-100 text-sm">Productos</h4>
+<a class="text-sm text-slate-500 hover:text-primary" href="catalogo.html">Catálogo</a>
+<a class="text-sm text-slate-500 hover:text-primary" href="packs.html">Packs</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-bold text-primary dark:text-slate-100 text-sm">Ayuda</h4>
+<a class="text-sm text-slate-500 hover:text-primary" href="faq.html">Envíos</a>
+<a class="text-sm text-slate-500 hover:text-primary" href="faq.html">Devoluciones</a>
+<a class="text-sm text-slate-500 hover:text-primary" href="faq.html">FAQ</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-bold text-primary dark:text-slate-100 text-sm">Contacto</h4>
+<p class="text-sm text-slate-500">hola@mateya.com</p>
+</div>
+</div>
+</div>
+<div class="max-w-[1200px] mx-auto mt-12 pt-8 border-t border-primary/5 text-center">
+<p class="text-xs text-slate-400">© 2024 MateYa! - Todos los derechos reservados.</p>
+</div>
+</footer>
+</div>
+</body></html>

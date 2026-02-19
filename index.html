@@ -1,0 +1,452 @@
+﻿<!DOCTYPE html>
+<html lang="es"><head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>MateYa! - Yerba Mate Premium Argentina</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <script id="tailwind-config">
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        colors: {
+                            "primary": "#1a2d1e",
+                            "background-light": "#f6f7f7",
+                            "background-dark": "#161c17",
+                            "accent-gold": "#c5a47e",
+                        },
+                        fontFamily: {
+                            "display": ["Manrope", "sans-serif"]
+                        },
+                        borderRadius: {
+                            "DEFAULT": "0.25rem",
+                            "lg": "0.5rem",
+                            "xl": "0.75rem",
+                            "full": "9999px"
+                        },
+                    },
+                },
+            }
+        </script>
+    <style>
+            body { font-family: 'Manrope', sans-serif; }
+            .glass-header {
+                background: rgba(246, 247, 247, 0.8);
+                backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px);
+            }
+            .hero-gradient {
+                background: linear-gradient(rgba(26, 45, 30, 0.6), rgba(26, 45, 30, 0.6));
+            }
+        </style></head><body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display transition-colors duration-300">
+    <!-- Sticky Header -->
+    <header class="sticky top-0 z-50 glass-header border-b border-primary/10 dark:border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-20">
+    <!-- Logo -->
+    <a class="flex-shrink-0 flex items-center" href="index.html">
+    <img alt="MateYa!" class="h-14 w-auto" src="assets/logo-mateya.png"/>
+    </a>
+    <!-- Desktop Menu -->
+    <nav class="hidden md:flex space-x-8">
+    <a class="text-sm font-semibold text-primary dark:text-white hover:opacity-70 transition-opacity" href="index.html">Inicio</a>
+    <a class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white transition-colors" href="catalogo.html">CatÃ¡logo</a>
+    <a class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white transition-colors" href="packs.html">Packs</a>
+    <a class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white transition-colors" href="nosotros.html">Nosotros</a>
+    <a class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-white transition-colors" href="faq.html">FAQ</a>
+    </nav>
+    <!-- Actions -->
+    <div class="flex items-center gap-4">
+    <button aria-label="Abrir carrito" class="relative cursor-pointer group" type="button">
+    <span class="material-icons text-primary dark:text-white">shopping_bag</span>
+    <span class="absolute -top-2 -right-2 bg-accent-gold text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full" data-cart-count>2</span>
+    </button>
+    <a class="hidden lg:flex items-center gap-2 bg-primary dark:bg-slate-100 text-white dark:text-primary px-5 py-2.5 rounded-full text-sm font-bold hover:scale-105 transition-transform" href="https://api.whatsapp.com/send?text=Hola%20MateYa!%20Quiero%20comprar" rel="noopener noreferrer" target="_blank">
+    <img alt="WA" class="w-4 h-4 invert brightness-0 dark:invert-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByt35XVvFikSFPINMJQr01BXYeF2iDcdUAfHA5w_I_RiVRcUIjWHzdtUZthRf7fYr4i5u5OW65cm005806412s0ua-RIw75achv8nFGotubUAZecf9dssGXQp6_20KeNteamOLAjZ0CE8uXj9Ln8ckpIAYMy0ASqWDmQdtdznODjk846Mwf8nXixOIc4WX-Z86tbfXHfX2PAaMPGnx31TzCeFRQ_0RIutYjSJdQr_UNCx6IycXsHks3FJWZVV6T6fhy54TacqiIDlv"/>
+    <span>Comprar por WhatsApp</span>
+    </a>
+    <button aria-controls="mobile-menu" aria-expanded="false" class="md:hidden text-primary dark:text-white" id="mobile-menu-button" type="button">
+    <span class="material-icons" id="mobile-menu-icon">menu</span>
+    </button>
+    </div>
+    </div>
+    </div>
+    </header>
+    <nav class="hidden md:hidden border-b border-primary/10 bg-background-light dark:bg-background-dark" id="mobile-menu">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-3">
+    <a class="py-2 font-semibold text-primary dark:text-white" href="index.html">Inicio</a>
+    <a class="py-2 font-semibold text-primary dark:text-white" href="catalogo.html">CatÃ¡logo</a>
+    <a class="py-2 font-semibold text-primary dark:text-white" href="packs.html">Packs</a>
+    <a class="py-2 font-semibold text-primary dark:text-white" href="nosotros.html">Nosotros</a>
+    <a class="py-2 font-semibold text-primary dark:text-white" href="faq.html">FAQ</a>
+    </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="relative h-[85vh] flex items-center overflow-hidden bg-primary">
+    <div class="absolute inset-0 opacity-60">
+    <img alt="Mate experience" class="w-full h-full object-cover" data-alt="Premium mate gourd and yerba preparation" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0jPbNCKqb-g3r_k63NJ2sz-A6mbp1dE5iAYAn6hIVvBd2AkvgE_YD6MMIhi-DfFeLWDILQxdgJQ35niWtx0zrfZPUC3Q5ic9dX485qbREhMQHSzXfUfvvitKbX7hI191nA2yZf9nwlbxkmk-JgfYf70Etr2PK_Fvva59F2TvRHPbMfJbw253y9dk2HLp2uEZmXKebfWk4Nh2b8gUrDRuo17XziQ0ZRZW7Phwzj7viykdHpoQn-PcS15FIob3eh7AXKcbHlpvAWPKx"/>
+    </div>
+    <div class="hero-gradient absolute inset-0"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
+    <div class="max-w-2xl">
+    <span class="inline-block px-4 py-1.5 rounded-full border border-white/30 text-xs font-bold uppercase tracking-widest mb-6 bg-white/10 backdrop-blur-sm">TradiciÃ³n Renovada</span>
+    <h1 class="text-5xl md:text-7xl font-800 leading-[1.1] mb-6">LlevÃ¡ la experiencia del mate a otro nivel</h1>
+    <p class="text-lg md:text-xl text-slate-200 mb-10 leading-relaxed font-light">Yerbas seleccionadas, mezclas artesanales y accesorios premium con envÃ­o a todo el paÃ­s. Calidad exportaciÃ³n para tu ritual diario.</p>
+    <div class="flex flex-col sm:flex-row gap-4">
+    <a class="bg-accent-gold text-white px-8 py-4 rounded-xl font-bold text-center hover:bg-opacity-90 transition-all shadow-xl shadow-black/20" href="#catalogo">Ver catÃ¡logo</a>
+    <a class="border-2 border-white/50 text-white px-8 py-4 rounded-xl font-bold text-center hover:bg-white hover:text-primary transition-all backdrop-blur-sm flex items-center justify-center gap-2" href="https://api.whatsapp.com/send?text=Hola%20MateYa!%20Necesito%20asesoramiento" rel="noopener noreferrer" target="_blank">
+    <span class="material-icons text-xl">chat</span>
+                            Hablar por WhatsApp
+                        </a>
+    </div>
+    </div>
+    </div>
+    </section>
+    <!-- Trust Bar -->
+    <div class="bg-white dark:bg-primary/50 py-8 border-b border-primary/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="flex items-center justify-center gap-4 group">
+    <div class="w-12 h-12 rounded-full bg-primary/5 dark:bg-white/5 flex items-center justify-center group-hover:scale-110 transition-transform">
+    <span class="material-icons text-primary dark:text-accent-gold">local_shipping</span>
+    </div>
+    <div>
+    <h4 class="font-bold text-sm">EnvÃ­os a todo el paÃ­s</h4>
+    <p class="text-xs text-slate-500 dark:text-slate-400">Llegamos a cada rincÃ³n de Argentina</p>
+    </div>
+    </div>
+    <div class="flex items-center justify-center gap-4 group">
+    <div class="w-12 h-12 rounded-full bg-primary/5 dark:bg-white/5 flex items-center justify-center group-hover:scale-110 transition-transform">
+    <span class="material-icons text-primary dark:text-accent-gold">support_agent</span>
+    </div>
+    <div>
+    <h4 class="font-bold text-sm">AtenciÃ³n personalizada</h4>
+    <p class="text-xs text-slate-500 dark:text-slate-400">Asesoramiento directo por expertos</p>
+    </div>
+    </div>
+    <div class="flex items-center justify-center gap-4 group">
+    <div class="w-12 h-12 rounded-full bg-primary/5 dark:bg-white/5 flex items-center justify-center group-hover:scale-110 transition-transform">
+    <span class="material-icons text-primary dark:text-accent-gold">verified</span>
+    </div>
+    <div>
+    <h4 class="font-bold text-sm">Calidad Premium</h4>
+    <p class="text-xs text-slate-500 dark:text-slate-400">Solo hojas seleccionadas sin polvo</p>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <!-- Featured Catalog -->
+    <section class="py-24 bg-background-light dark:bg-background-dark" id="catalogo">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-end mb-12">
+    <div>
+    <h2 class="text-primary dark:text-white text-3xl font-800">Nuestras Yerbas</h2>
+    <p class="text-slate-500 mt-2">Sabores autÃ©nticos del Litoral para tu mate.</p>
+    </div>
+    <a class="text-primary dark:text-accent-gold font-bold text-sm flex items-center gap-1 group" href="catalogo.html">
+                        Ver todas <span class="material-icons text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+    </a>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+    <!-- Product Card 1 -->
+    <div class="bg-white dark:bg-primary/20 rounded-2xl overflow-hidden group border border-transparent hover:border-primary/10 transition-all hover:shadow-2xl">
+    <div class="relative aspect-square overflow-hidden bg-slate-100">
+    <span class="absolute top-4 left-4 z-10 bg-accent-gold text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">MÃ¡s vendida</span>
+    <img alt="Yerba Monte" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Yerba mate package premium organic brand" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2Z-95suOVQ9jpL2GQ0S0fmgAUmOmAznpPpxkmxCzBjN6vRP4gRgzHGGykv0rnpYsE9__dvGeG1oujqaZd11U4qfLFPWG1Ujdq3koeELeqNcF1Z14uukBv3aLD4JbYqRnTPxJcouSIOTk8OZPTx71FjbJ4pkqOj5Ezl3FvueeVIPUv21dRP6DATZpaXgqIfnoWfqxEQmrwxSf3yRpMrqs3XxFwbW_qz9KhnxumLhe0ZJiqz7K_a8jqUJEyH544Q9ix7KORRX2lr4qp"/>
+    </div>
+    <div class="p-6">
+    <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Intensa</p>
+    <h3 class="text-lg font-bold text-primary dark:text-white mb-4">Yerba OrgÃ¡nica Monte</h3>
+    <div class="flex gap-2 mb-6">
+    <button class="px-3 py-1 text-[10px] border border-primary/20 rounded-full font-bold bg-primary/5 dark:bg-white/5">500g</button>
+    <button class="px-3 py-1 text-[10px] border border-primary/20 rounded-full font-bold">1kg</button>
+    </div>
+    <div class="flex items-center justify-between">
+    <span class="text-xl font-800 text-primary dark:text-white">$4.200</span>
+    <div class="flex gap-2">
+    <button class="w-10 h-10 flex items-center justify-center bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors">
+    <span class="material-icons text-lg">add_shopping_cart</span>
+    </button>
+    <a class="w-10 h-10 flex items-center justify-center border border-green-500/30 text-green-600 rounded-lg hover:bg-green-50 transition-colors" href="https://api.whatsapp.com/send?text=Hola%20MateYa!%20Quiero%20info%20del%20producto" rel="noopener noreferrer" target="_blank">
+    <img alt="WA" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZ2KTL0dRw-_VdOsCF5qxHBH8Nc7R9IPJH7EP-5498zenKOhJi_gyzXbsMOWYFTVmpIsfhLKVlHe2Eq5mEL6IY3xezsmojEKqtTjrPcaWJ2doPOVgWwJlBeWmUMP3lRuteV9Uxouqu6IObZwBhnzdedKs90W8lGg0l2K0cwSsye8fAVY4oG8Ic17BleDxGAJ1IGqxsi35M4vIcNHIs4lb9GJM934hBxle4c6r1Z4AKqAVQUYUvS1zVVvr1GpAQVtx7LijHdYaAx0nI"/>
+    </a>
+    </div>
+    </div>
+    </div>
+    </div>
+    <!-- Product Card 2 -->
+    <div class="bg-white dark:bg-primary/20 rounded-2xl overflow-hidden group border border-transparent hover:border-primary/10 transition-all hover:shadow-2xl">
+    <div class="relative aspect-square overflow-hidden bg-slate-100">
+    <img alt="Mezcla de Campo" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Herbal infusion mate blend package" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDc6FLdGktfTIEnovU2sz803b0NfmTVwaQw5GNcC3AuxlDbAdHHBpZvzZNSdQtwB-eyk5d-xZz29_VZ7rPoM7BmqkCHxyaK6IbsO86YNYCy69yAQac045j5fZUYv1xdRfxgT4fdF2PWa6quy09qxlNh_xRpsbFz4l0WHGJZcjvbczrUg1UUUaPhDgIu_dCNLCL7dRuI390vgi_jGadHcv7I2D3V42TsRYuPkpYZwVkdauCRVMmDaESJgCvRoRBZrIMYfj5FBk0Z58wh"/>
+    </div>
+    <div class="p-6">
+    <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Suave</p>
+    <h3 class="text-lg font-bold text-primary dark:text-white mb-4">Mezcla de Campo</h3>
+    <div class="flex gap-2 mb-6">
+    <button class="px-3 py-1 text-[10px] border border-primary/20 rounded-full font-bold">500g</button>
+    <button class="px-3 py-1 text-[10px] border border-primary/20 rounded-full font-bold bg-primary/5 dark:bg-white/5">1kg</button>
+    </div>
+    <div class="flex items-center justify-between">
+    <span class="text-xl font-800 text-primary dark:text-white">$3.800</span>
+    <div class="flex gap-2">
+    <button class="w-10 h-10 flex items-center justify-center bg-primary text-white rounded-lg">
+    <span class="material-icons text-lg">add_shopping_cart</span>
+    </button>
+    <a class="w-10 h-10 flex items-center justify-center border border-green-500/30 text-green-600 rounded-lg" href="https://api.whatsapp.com/send?text=Hola%20MateYa!%20Quiero%20info%20del%20producto" rel="noopener noreferrer" target="_blank">
+    <img alt="WA" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5FCzGGF4UUtM0a9gCdWoAyaoQJMPzFQ4OvLPg1Ryo12H2GIU7i__Qq3UJOjF8UMPxYhOB4mNWEwLGwAZm9usSaZuhpk57zhFHPwSjRRomii_4LKiyQZ5vqBVmqIxA8DXz1tYQdlS8G8_ogzcbDVLcjsW_YMNFDtLmjQPJFh_y2dwfCL-fnpRtXLhwN7JhLVzWOAcIsGj9Tv9wF9pBdt_LA9MAJTfLSd6BqI_2grqLp19o-WMzNr37IKwls5shF28BkajWMvI_IEiP"/>
+    </a>
+    </div>
+    </div>
+    </div>
+    </div>
+    <!-- Product Card 3 -->
+    <div class="bg-white dark:bg-primary/20 rounded-2xl overflow-hidden group border border-transparent hover:border-primary/10 transition-all hover:shadow-2xl">
+    <div class="relative aspect-square overflow-hidden bg-slate-100">
+    <img alt="Poleo y Menta" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Mate with herbs package design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVUpnbpBezz7WWrcZusnjWf0tEsnOzzYNJFusmieDKAyGLDCZMkyGjFlN484iv7WMNgDlwBHFsbXoE0uznz22zbb6VBE5O5MxIwcAZRr-zTJH7eT740sd1VJY7t2JOuRUbgFnYXFI_UMien_M-9xaShuHRWkgvpbQOLxiLZCZxI4Lx-lj0pyhFF-neOu_xBh1B_vzcGBJcHZioz9c66O1L349T0nWePz3F-fVzpJeU06AnFzh9BEI0oAirfWowkuzyhCJPhdf7f82M"/>
+    </div>
+    <div class="p-6">
+    <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Refrescante</p>
+    <h3 class="text-lg font-bold text-primary dark:text-white mb-4">Hierbas del Litoral</h3>
+    <div class="flex gap-2 mb-6">
+    <button class="px-3 py-1 text-[10px] border border-primary/20 rounded-full font-bold bg-primary/5 dark:bg-white/5">500g</button>
+    </div>
+    <div class="flex items-center justify-between">
+    <span class="text-xl font-800 text-primary dark:text-white">$3.500</span>
+    <div class="flex gap-2">
+    <button class="w-10 h-10 flex items-center justify-center bg-primary text-white rounded-lg">
+    <span class="material-icons text-lg">add_shopping_cart</span>
+    </button>
+    <a class="w-10 h-10 flex items-center justify-center border border-green-500/30 text-green-600 rounded-lg" href="https://api.whatsapp.com/send?text=Hola%20MateYa!%20Quiero%20info%20del%20producto" rel="noopener noreferrer" target="_blank">
+    <img alt="WA" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-mnHRMUwjY6jc2Z0B3bGKerYRoQHe_QyUjf1yI3olKi5wk84C8q4HunvCpbPgPoUQ0O7TXdo8DuORi0CJF33q3Shk9J9j6h0y4-PymUz0JtqPiaWU2KivZy3ULbfuRGhUJUux0x7eQQoVL7IiP2oiU8AQJfzTRmZgMR9OQsugj8Y5hoso6Hvv8DdlYIcMSsYBYt4hQrxhGAXp_m4ymlTI4a7btK8BYmyZ4wZAp5LTn0b99g4RELFC2syNahtj8r8RryL3TtUlhNn2"/>
+    </a>
+    </div>
+    </div>
+    </div>
+    </div>
+    <!-- Product Card 4 -->
+    <div class="bg-white dark:bg-primary/20 rounded-2xl overflow-hidden group border border-transparent hover:border-primary/10 transition-all hover:shadow-2xl">
+    <div class="relative aspect-square overflow-hidden bg-slate-100">
+    <span class="absolute top-4 left-4 z-10 bg-primary text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">EdiciÃ³n Especial</span>
+    <img alt="SelecciÃ³n Especial" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Aged yerba mate barbacua edition" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyhnrPt-L2SZ0L6MS0pT09E-kgpvRkDjq_AV5Uhlknorw3n-MfGN-cJUyHK9oKPtZVdh4p0HvSHfjsHMVXrwqZGPHlxeb1_Ylx1rcRMEpHXHqR9CL26z4nuwnGyklUbidJT_sPQkw091622gCRL8MWDRDfZEg8palsSBPhuNGzzu8a0xckGy-RU_x5obWhSWWnMlZqLGfLfJVdTCUD6tK6LDEKM06CPFwzCm8AL2Ce3U8LMHaY4w4oNCv3sT9AN4E2zsmNkqup7oUF"/>
+    </div>
+    <div class="p-6">
+    <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">BarbacuÃ¡</p>
+    <h3 class="text-lg font-bold text-primary dark:text-white mb-4">SelecciÃ³n Especial</h3>
+    <div class="flex gap-2 mb-6">
+    <button class="px-3 py-1 text-[10px] border border-primary/20 rounded-full font-bold bg-primary/5 dark:bg-white/5">500g</button>
+    <button class="px-3 py-1 text-[10px] border border-primary/20 rounded-full font-bold">1kg</button>
+    </div>
+    <div class="flex items-center justify-between">
+    <span class="text-xl font-800 text-primary dark:text-white">$5.900</span>
+    <div class="flex gap-2">
+    <button class="w-10 h-10 flex items-center justify-center bg-primary text-white rounded-lg">
+    <span class="material-icons text-lg">add_shopping_cart</span>
+    </button>
+    <a class="w-10 h-10 flex items-center justify-center border border-green-500/30 text-green-600 rounded-lg" href="https://api.whatsapp.com/send?text=Hola%20MateYa!%20Quiero%20info%20del%20producto" rel="noopener noreferrer" target="_blank">
+    <img alt="WA" class="w-5 h-5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxQaXd1OtZTk7DxJwQoQu0aO2PC9BQmSG3JGtFzVmRwystqS45xpEgOTgNZMIaQZyOUUC83v65FJgIzrBx9NH1UXXXnbY7RYZjdo49BfrNiyPq-eAGsZwDvz_tqWNeWHARGGFDvnXus_qE3jOLpEQrGF7SPYItsoXrH2CW_EXu6BBHKQlO9MC8sbcxU8T5vvDq8X-50MN-weTqlq5yhRaxViaYrRGI9iGPXUOO-NkNIo_yIHoS6Rba7wOYR5g5dzeYOvArNqfSLr3U"/>
+    </a>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+    <!-- Packs Section -->
+    <section class="py-24 bg-primary text-white" id="packs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+    <h2 class="text-4xl font-800 mb-4">Combos Especiales</h2>
+    <p class="text-slate-400 max-w-xl mx-auto">Ideales para regalar o renovar tu kit personal. AhorrÃ¡ comprando el pack completo.</p>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+    <!-- Kit de Inicio -->
+    <div class="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-2xl flex flex-col items-center text-center">
+    <img alt="Kit Inicio" class="w-48 h-48 object-contain mb-8 filter drop-shadow-2xl" data-alt="Traditional mate starter pack with gourd and straw" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsqgkdU2NKxVnCrfCFQewbmzeyL4T5pzWjh0ZPLAG6FQtRybUbSP-ylhk76PGJhi-7uudteIrrmW1eegiGLLQmDf3i07PnDTyYdj3bOqKv1YGjSgB_3CiIcBRzIWurL5yw4owWft-OfTzeDdeEkW78Iss00WHMAUTmEkQZIQ1CzW7ABDjN7EZGv7cSaeXMNKA2yFQ2nnAeZH17jxgGCxVwkDWlHJngenTciSPNx25Goqpo_9juF0YYH-iO7h4RroFmiDXVnX12A3R-"/>
+    <h3 class="text-2xl font-bold mb-2">Kit de Inicio</h3>
+    <p class="text-slate-400 text-sm mb-6">Mate Imperial + Bombilla de alpaca + 500g Yerba Monte</p>
+    <div class="mt-auto">
+    <span class="block text-3xl font-800 text-accent-gold mb-6">$35.000</span>
+    <button class="w-full bg-white text-primary px-8 py-3 rounded-xl font-bold hover:bg-accent-gold hover:text-white transition-colors">Lo quiero</button>
+    </div>
+    </div>
+    <!-- Combo Oficina -->
+    <div class="bg-white/10 backdrop-blur-sm border border-accent-gold/50 p-8 rounded-2xl flex flex-col items-center text-center relative scale-105 shadow-2xl z-10">
+    <span class="absolute -top-4 bg-accent-gold text-[10px] font-bold px-4 py-1.5 rounded-full uppercase tracking-tighter">MÃ¡s Elegido</span>
+    <img alt="Combo Oficina" class="w-48 h-48 object-contain mb-8 filter drop-shadow-2xl" data-alt="Modern thermos and mate set for office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwcP4Ud238HfvPBB8fVgEgRXf3b3BsGXGlbXyQNvMqsty6P1Cc_Fi4Feibdu0l3Afr5s7t8awzVCv2jdwqNYkhtnYRPpwZmGJojLJ5PHVlw9YXK6STaHeHojDB_zFCDpzIqBEI4zH37QwdAgLvN3_ZroIHrA5OmD5g0FLliZ3mb9EGpn0qVbRfvZIleCqPeS7g6H8YlkPCeM76CGn-yOnSbQdnrKpPLoh_nsqnk1NNAmN0pDaAal-yVF9NLmDNrpBceEu2ShDv7Lwy"/>
+    <h3 class="text-2xl font-bold mb-2">Combo de Oficina</h3>
+    <p class="text-slate-400 text-sm mb-6">Termo 1L + Mate de acero + 2kg Yerba Suave</p>
+    <div class="mt-auto">
+    <span class="block text-3xl font-800 text-accent-gold mb-6">$58.000</span>
+    <button class="w-full bg-accent-gold text-white px-8 py-3 rounded-xl font-bold hover:brightness-110 transition-colors">Lo quiero</button>
+    </div>
+    </div>
+    <!-- Regalo Premium -->
+    <div class="bg-white/5 backdrop-blur-sm border border-white/10 p-8 rounded-2xl flex flex-col items-center text-center">
+    <img alt="Regalo Premium" class="w-48 h-48 object-contain mb-8 filter drop-shadow-2xl" data-alt="Luxury gift box with artisanal mate products" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXfcVpV9sja6uxFFBVlEQzE-c9dIdyz7nFzVE8_diIy7hFSKOit8PnSkq2n4spNY5ETce5oQUh2EsOo3XwlI8ufIriC3kf-X6QH408yDVemPXIX4LrZE5T-HUcx8JXsgdZ9grm26Ynxh51mEsraiigro9wEwdjR4ZZo28RSmTAnCGehc36KN-F9t9Ro_6KA3xi1ZRSuvixqNR-JNQDwXmuWWiBM9HDnjT-3r90ZYrKlbZ84iadoFrLUQIiyLsqm4E6mWc-E2DzRAJL"/>
+    <h3 class="text-2xl font-bold mb-2">Regalo Premium</h3>
+    <p class="text-slate-400 text-sm mb-6">Caja artesanal + Mate tallado + Yerba BarbacuÃ¡</p>
+    <div class="mt-auto">
+    <span class="block text-3xl font-800 text-accent-gold mb-6">$82.000</span>
+    <button class="w-full bg-white text-primary px-8 py-3 rounded-xl font-bold hover:bg-accent-gold hover:text-white transition-colors">Lo quiero</button>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-background-light dark:bg-background-dark py-20 border-t border-primary/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+    <div class="col-span-1 md:col-span-1">
+    <img alt="MateYa!" class="h-14 w-auto mb-6 block" src="assets/logo-mateya.png"/>
+    <p class="text-slate-500 text-sm leading-relaxed">PasiÃ³n argentina en cada cebada. Seleccionamos lo mejor de nuestra tierra para llevarlo directo a tu hogar.</p>
+    </div>
+    <div>
+    <h5 class="font-bold text-sm uppercase tracking-widest mb-6">Explorar</h5>
+    <ul class="space-y-4 text-sm text-slate-500">
+    <li><a class="hover:text-primary transition-colors" href="catalogo.html">Nuestras Yerbas</a></li>
+    <li><a class="hover:text-primary transition-colors" href="catalogo.html">Accesorios</a></li>
+    <li><a class="hover:text-primary transition-colors" href="packs.html">Packs Regalo</a></li>
+    <li><a class="hover:text-primary transition-colors" href="https://api.whatsapp.com/send?text=Hola%20MateYa!%20Quiero%20info%20mayorista" rel="noopener noreferrer" target="_blank">Mayoristas</a></li>
+    </ul>
+    </div>
+    <div>
+    <h5 class="font-bold text-sm uppercase tracking-widest mb-6">Ayuda</h5>
+    <ul class="space-y-4 text-sm text-slate-500">
+    <li><a class="hover:text-primary transition-colors" href="faq.html">EnvÃ­os y Entregas</a></li>
+    <li><a class="hover:text-primary transition-colors" href="faq.html">Formas de Pago</a></li>
+    <li><a class="hover:text-primary transition-colors" href="faq.html">TÃ©rminos y Condiciones</a></li>
+    <li><a class="hover:text-primary transition-colors" href="https://api.whatsapp.com/send?text=Hola%20MateYa!%20Quiero%20contactarme" rel="noopener noreferrer" target="_blank">Contacto</a></li>
+    </ul>
+    </div>
+    <div>
+    <h5 class="font-bold text-sm uppercase tracking-widest mb-6">Newsletter</h5>
+    <p class="text-xs text-slate-500 mb-4">Sumate para recibir recetas de blends y ofertas.</p>
+    <div class="flex gap-2">
+    <input class="bg-white dark:bg-primary/5 border border-primary/10 rounded-lg px-4 py-2 text-sm w-full focus:ring-2 focus:ring-accent-gold outline-none" id="newsletter-email" placeholder="Email" type="email"/>
+    <button class="bg-primary text-white px-4 py-2 rounded-lg font-bold" id="newsletter-submit" type="button">Unirse</button>
+    </div>
+    </div>
+    </div>
+    <div class="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-primary/5 text-xs text-slate-400">
+    <p>Â© 2024 MateYa! Yerbas Seleccionadas. Hecho con pasiÃ³n en Argentina.</p>
+    <div class="flex gap-6 mt-4 md:mt-0">
+    <a class="hover:text-primary" href="https://instagram.com" rel="noopener noreferrer" target="_blank">Instagram</a>
+    <a class="hover:text-primary" href="https://facebook.com" rel="noopener noreferrer" target="_blank">Facebook</a>
+    <a class="hover:text-primary" href="https://x.com" rel="noopener noreferrer" target="_blank">Twitter</a>
+    </div>
+    </div>
+    </div>
+    </footer>
+    <!-- Floating WhatsApp Button -->
+    <div class="fixed bottom-8 right-8 z-[60] flex items-center gap-4 group">
+    <div class="bg-white dark:bg-primary px-4 py-2 rounded-full shadow-xl border border-primary/5 transform translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none">
+    <p class="text-xs font-bold text-primary dark:text-white">Â¿En quÃ© te ayudamos?</p>
+    </div>
+    <a class="w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all" href="https://api.whatsapp.com/send?text=Hola%20MateYa!%20Quiero%20comprar" rel="noopener noreferrer" target="_blank">
+    <img alt="WA" class="w-8 h-8 invert brightness-0 dark:invert-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAx-1HztdDwWwL1BSpYS3gvnB_AKlIfr1lxP7lXqkMe9pBmYKDlJjMaaxsUZcPPA5QWQLOSGHLL0iVSyKOw8C2cDpMLrQsixRsuDsA8WgEQenaR7830l--Pp0LMjsUiqHgAp7Il9IFti581vXJflHYnDZOgUtIkNFOfN1IqXd4GlBoixEnyjeRSufQYza-Su5e4v-lDdvs9ADE1UsieEuWZLHnfDaypuNMvsRQr9oaQha4nvV2TGgMlodg1S_q3LktvraCQoFdHiq7P"/>
+    </a>
+    </div>
+        <script>
+      (function () {
+        var menuButton = document.getElementById("mobile-menu-button");
+        var menu = document.getElementById("mobile-menu");
+        var menuIcon = document.getElementById("mobile-menu-icon");
+        var cartButton = document.querySelector('button[aria-label="Abrir carrito"]');
+        var cartCountEls = document.querySelectorAll("[data-cart-count]");
+        var addToCartButtons = Array.from(document.querySelectorAll("button")).filter(function (button) {
+          return button.textContent && button.textContent.indexOf("add_shopping_cart") !== -1;
+        });
+        var sizeButtons = Array.from(document.querySelectorAll("button")).filter(function (button) {
+          var label = button.textContent ? button.textContent.trim() : "";
+          return label === "500g" || label === "1kg";
+        });
+        var buyButtons = Array.from(document.querySelectorAll("button")).filter(function (button) {
+          return button.textContent && button.textContent.trim() === "Lo quiero";
+        });
+        var newsletterSubmit = document.getElementById("newsletter-submit");
+        var newsletterEmail = document.getElementById("newsletter-email");
+
+        if (menuButton && menu && menuIcon) {
+          menuButton.addEventListener("click", function () {
+            var isHidden = menu.classList.contains("hidden");
+            menu.classList.toggle("hidden");
+            menuButton.setAttribute("aria-expanded", isHidden ? "true" : "false");
+            menuIcon.textContent = isHidden ? "close" : "menu";
+          });
+
+          menu.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", function () {
+              menu.classList.add("hidden");
+              menuButton.setAttribute("aria-expanded", "false");
+              menuIcon.textContent = "menu";
+            });
+          });
+        }
+
+        var cartCount = 2;
+        if (cartButton) {
+          cartButton.addEventListener("click", function () {
+            var target = document.getElementById("catalogo");
+            if (target) {
+              target.scrollIntoView({ behavior: "smooth" });
+            }
+          });
+        }
+
+        addToCartButtons.forEach(function (button) {
+          button.setAttribute("type", "button");
+          button.addEventListener("click", function () {
+            cartCount += 1;
+            cartCountEls.forEach(function (el) {
+              el.textContent = String(cartCount);
+            });
+          });
+        });
+
+        sizeButtons.forEach(function (button) {
+          button.setAttribute("type", "button");
+          button.addEventListener("click", function () {
+            var group = button.parentElement;
+            if (!group) return;
+            group.querySelectorAll("button").forEach(function (item) {
+              item.classList.remove("bg-primary/5", "dark:bg-white/5");
+            });
+            button.classList.add("bg-primary/5", "dark:bg-white/5");
+          });
+        });
+
+        buyButtons.forEach(function (button) {
+          button.setAttribute("type", "button");
+          button.addEventListener("click", function () {
+            var card = button.closest("div.bg-white\/5") || button.closest("div.bg-white\/10") || button.closest("div");
+            var title = card ? card.querySelector("h3") : null;
+            var productName = title ? title.textContent.trim() : "un producto";
+            var url = "https://api.whatsapp.com/send?text=" + encodeURIComponent("Hola MateYa! Quiero " + productName);
+            window.open(url, "_blank", "noopener,noreferrer");
+          });
+        });
+
+        if (newsletterSubmit && newsletterEmail) {
+          newsletterSubmit.addEventListener("click", function () {
+            var email = newsletterEmail.value.trim();
+            if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+              alert("Ingresa un email valido.");
+              return;
+            }
+            alert("Gracias por suscribirte, " + email + ".");
+            newsletterEmail.value = "";
+          });
+        }
+      })();
+    </script>
+    </body></html>
+
+
+
+
